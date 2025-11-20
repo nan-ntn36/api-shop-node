@@ -4,10 +4,10 @@ info:
   description: |-
     This is a list api of course FE
   contact:
-    email: lttd0204@gmail.com
+    email:
   version: 1.0.11
 servers:
-  - url: https://api-shop-l5ir.onrender.com
+  - url: http://localhost:3001
 tags:
   - name: auth
     description: Everything about auth
@@ -38,7 +38,7 @@ paths:
                   example: admin@gmail.com
                 password:
                   type: string
-                  example: 123456789Kha@
+                  example: 123456789Ngia@
               required:
                 - email
                 - password
@@ -67,26 +67,26 @@ paths:
                 - email
                 - password
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -111,7 +111,7 @@ paths:
                   example: admin@gmail.com
                 password:
                   type: string
-                  example: 123456789Kha@
+                  example: 123456789Ngia@
               required:
                 - email
                 - password
@@ -140,26 +140,26 @@ paths:
                 - email
                 - password
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -197,26 +197,26 @@ paths:
               required:
                 - idToken
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
 
   /api/auth/login-google:
@@ -252,26 +252,26 @@ paths:
               required:
                 - idToken
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
 
   /api/auth/register-facebook:
@@ -307,26 +307,26 @@ paths:
               required:
                 - idToken
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
 
   /api/auth/login-facebook:
@@ -362,28 +362,28 @@ paths:
               required:
                 - idToken
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
-  
+
   /api/auth/update-device:
     post:
       tags:
@@ -417,26 +417,26 @@ paths:
               required:
                 - deviceToken
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -447,39 +447,39 @@ paths:
         - auth
       summary: get new accessToken
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "201":
+                  $ref: '#/components/schemas/User'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -490,26 +490,26 @@ paths:
         - auth
       summary: logout user
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -522,26 +522,26 @@ paths:
       description: Get details info of user
       operationId: getAuthMe
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -556,35 +556,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
           application/xml:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -634,26 +634,26 @@ paths:
                 - newPassword
                 - currentPassword
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -697,26 +697,26 @@ paths:
               required:
                 - email
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
 
   /api/auth/reset-password:
@@ -765,26 +765,26 @@ paths:
                 - newPassword
                 - secretKey
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -801,35 +801,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
           application/xml:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -864,58 +864,58 @@ paths:
           in: query
           description: sort of list users
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: roleId
           in: query
           description: filter of list users by role id (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
         - name: status
           in: query
           description: filter of list users by status of user (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
         - name: cityId
           in: query
           description: filter of list users by cityId of user (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
         - name: userType
           in: query
           description: filter of list users by userType of user (if many add |)
           required: false
-          example: "1|2|3"
+          example: '1|2|3'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -934,26 +934,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -971,26 +971,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1012,36 +1012,36 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
           application/xml:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/User"
+              $ref: '#/components/schemas/User'
         required: true
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1065,26 +1065,26 @@ paths:
                   items:
                     type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1100,35 +1100,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Role"
+              $ref: '#/components/schemas/Role'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Role"
+              $ref: '#/components/schemas/Role'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Role"
+              $ref: '#/components/schemas/Role'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
-        "401":
+                  $ref: '#/components/schemas/Role'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1163,30 +1163,30 @@ paths:
           in: query
           description: sort of list roles
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Role"
-        "401":
+                  $ref: '#/components/schemas/Role'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1205,26 +1205,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
-        "401":
+                  $ref: '#/components/schemas/Role'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
     delete:
       tags:
@@ -1240,26 +1240,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
-        "401":
+                  $ref: '#/components/schemas/Role'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
     put:
       tags:
@@ -1316,26 +1316,26 @@ paths:
                 - permissions
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Role"
-        "401":
+                  $ref: '#/components/schemas/Role'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1359,39 +1359,39 @@ paths:
                   items:
                     type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Role"
-        "201":
+                  $ref: '#/components/schemas/Role'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Role"
+                  $ref: '#/components/schemas/Role'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Role"
-        "401":
+                  $ref: '#/components/schemas/Role'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1407,48 +1407,48 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProductType"
+              $ref: '#/components/schemas/ProductType'
           application/xml:
             schema:
-              $ref: "#/components/schemas/ProductType"
+              $ref: '#/components/schemas/ProductType'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/ProductType"
+              $ref: '#/components/schemas/ProductType'
         required: true
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "201":
+                  $ref: '#/components/schemas/ProductType'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "401":
+                  $ref: '#/components/schemas/ProductType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1483,43 +1483,43 @@ paths:
           in: query
           description: sort of list product types
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "201":
+                  $ref: '#/components/schemas/ProductType'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "401":
+                  $ref: '#/components/schemas/ProductType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1539,39 +1539,39 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "201":
+                  $ref: '#/components/schemas/ProductType'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "401":
+                  $ref: '#/components/schemas/ProductType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
     delete:
       tags:
@@ -1587,39 +1587,39 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "201":
+                  $ref: '#/components/schemas/ProductType'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "401":
+                  $ref: '#/components/schemas/ProductType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1641,49 +1641,49 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProductType"
+              $ref: '#/components/schemas/ProductType'
           application/xml:
             schema:
-              $ref: "#/components/schemas/ProductType"
+              $ref: '#/components/schemas/ProductType'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/ProductType"
+              $ref: '#/components/schemas/ProductType'
         required: true
 
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "201":
+                  $ref: '#/components/schemas/ProductType'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "401":
+                  $ref: '#/components/schemas/ProductType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1708,39 +1708,39 @@ paths:
                   items:
                     type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "201":
+                  $ref: '#/components/schemas/ProductType'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
+                  $ref: '#/components/schemas/ProductType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/ProductType"
-        "401":
+                  $ref: '#/components/schemas/ProductType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1757,35 +1757,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/City"
+              $ref: '#/components/schemas/City'
           application/xml:
             schema:
-              $ref: "#/components/schemas/City"
+              $ref: '#/components/schemas/City'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/City"
+              $ref: '#/components/schemas/City'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
+                  $ref: '#/components/schemas/City'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
-        "401":
+                  $ref: '#/components/schemas/City'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1820,30 +1820,30 @@ paths:
           in: query
           description: sort of list cities
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/City"
+                  $ref: '#/components/schemas/City'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/City"
-        "401":
+                  $ref: '#/components/schemas/City'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1863,26 +1863,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
+                  $ref: '#/components/schemas/City'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
-        "401":
+                  $ref: '#/components/schemas/City'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
     delete:
       tags:
@@ -1898,26 +1898,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
+                  $ref: '#/components/schemas/City'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
-        "401":
+                  $ref: '#/components/schemas/City'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1939,36 +1939,36 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/City"
+              $ref: '#/components/schemas/City'
           application/xml:
             schema:
-              $ref: "#/components/schemas/City"
+              $ref: '#/components/schemas/City'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/City"
+              $ref: '#/components/schemas/City'
         required: true
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
+                  $ref: '#/components/schemas/City'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
-        "401":
+                  $ref: '#/components/schemas/City'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -1992,26 +1992,26 @@ paths:
                   items:
                     type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
+                  $ref: '#/components/schemas/City'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/City"
-        "401":
+                  $ref: '#/components/schemas/City'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2028,35 +2028,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DeliveryType"
+              $ref: '#/components/schemas/DeliveryType'
           application/xml:
             schema:
-              $ref: "#/components/schemas/DeliveryType"
+              $ref: '#/components/schemas/DeliveryType'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/DeliveryType"
+              $ref: '#/components/schemas/DeliveryType'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
+                  $ref: '#/components/schemas/DeliveryType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
-        "401":
+                  $ref: '#/components/schemas/DeliveryType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2091,30 +2091,30 @@ paths:
           in: query
           description: sort of list delivery types
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
+                  $ref: '#/components/schemas/DeliveryType'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
-        "401":
+                  $ref: '#/components/schemas/DeliveryType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2134,26 +2134,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
+                  $ref: '#/components/schemas/DeliveryType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
-        "401":
+                  $ref: '#/components/schemas/DeliveryType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
     delete:
       tags:
@@ -2169,26 +2169,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
+                  $ref: '#/components/schemas/DeliveryType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
-        "401":
+                  $ref: '#/components/schemas/DeliveryType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2210,36 +2210,36 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DeliveryType"
+              $ref: '#/components/schemas/DeliveryType'
           application/xml:
             schema:
-              $ref: "#/components/schemas/DeliveryType"
+              $ref: '#/components/schemas/DeliveryType'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/DeliveryType"
+              $ref: '#/components/schemas/DeliveryType'
         required: true
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
+                  $ref: '#/components/schemas/DeliveryType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
-        "401":
+                  $ref: '#/components/schemas/DeliveryType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2263,26 +2263,26 @@ paths:
                   items:
                     type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
+                  $ref: '#/components/schemas/DeliveryType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/DeliveryType"
-        "401":
+                  $ref: '#/components/schemas/DeliveryType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2299,35 +2299,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PaymentType"
+              $ref: '#/components/schemas/PaymentType'
           application/xml:
             schema:
-              $ref: "#/components/schemas/PaymentType"
+              $ref: '#/components/schemas/PaymentType'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/PaymentType"
+              $ref: '#/components/schemas/PaymentType'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
+                  $ref: '#/components/schemas/PaymentType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
-        "401":
+                  $ref: '#/components/schemas/PaymentType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2362,30 +2362,30 @@ paths:
           in: query
           description: sort of list payment types
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/PaymentType"
+                  $ref: '#/components/schemas/PaymentType'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/PaymentType"
-        "401":
+                  $ref: '#/components/schemas/PaymentType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2405,26 +2405,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
+                  $ref: '#/components/schemas/PaymentType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
-        "401":
+                  $ref: '#/components/schemas/PaymentType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
     delete:
       tags:
@@ -2440,26 +2440,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
+                  $ref: '#/components/schemas/PaymentType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
-        "401":
+                  $ref: '#/components/schemas/PaymentType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2481,36 +2481,36 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PaymentType"
+              $ref: '#/components/schemas/PaymentType'
           application/xml:
             schema:
-              $ref: "#/components/schemas/PaymentType"
+              $ref: '#/components/schemas/PaymentType'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/PaymentType"
+              $ref: '#/components/schemas/PaymentType'
         required: true
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
+                  $ref: '#/components/schemas/PaymentType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
-        "401":
+                  $ref: '#/components/schemas/PaymentType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2534,26 +2534,26 @@ paths:
                   items:
                     type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
+                  $ref: '#/components/schemas/PaymentType'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/PaymentType"
-        "401":
+                  $ref: '#/components/schemas/PaymentType'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2570,48 +2570,48 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Product"
+              $ref: '#/components/schemas/Product'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Product"
+              $ref: '#/components/schemas/Product'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Product"
+              $ref: '#/components/schemas/Product'
         required: true
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "201":
+                  $ref: '#/components/schemas/Product'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2646,7 +2646,7 @@ paths:
           in: query
           description: sort of list products
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: productType
@@ -2660,7 +2660,7 @@ paths:
           description: id of location product (if multiple add | )
           required: false
           schema:
-              type: string
+            type: string
         - name: status
           in: query
           description: status of product (0 | 1)
@@ -2692,26 +2692,26 @@ paths:
           schema:
             type: number
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2731,26 +2731,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2772,35 +2772,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Product"
+              $ref: '#/components/schemas/Product'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Product"
+              $ref: '#/components/schemas/Product'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Product"
+              $ref: '#/components/schemas/Product'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2818,26 +2818,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2874,7 +2874,7 @@ paths:
           in: query
           description: sort of list products
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: productType
@@ -2888,7 +2888,7 @@ paths:
           description: id of location product (if multiple add | )
           required: false
           schema:
-              type: string
+            type: string
         - name: minPrice
           in: query
           description: min price of product
@@ -2914,26 +2914,26 @@ paths:
           schema:
             type: number
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -2976,30 +2976,30 @@ paths:
           in: query
           description: sort of list products
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3025,26 +3025,26 @@ paths:
           schema:
             type: boolean
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3070,26 +3070,26 @@ paths:
           schema:
             type: boolean
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3114,39 +3114,39 @@ paths:
                   items:
                     type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "201":
+                  $ref: '#/components/schemas/Product'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3190,26 +3190,26 @@ paths:
               required:
                 - productId
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3253,26 +3253,26 @@ paths:
               required:
                 - productId
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3306,26 +3306,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3359,30 +3359,30 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
-  
+
   /api/orders/status/{orderId}:
     post:
       tags:
@@ -3410,7 +3410,7 @@ paths:
                 isPaid:
                   type: boolean
                   example: 1
-                status: 
+                status:
                   type: number
                   example: 0 | 1 | 2 | 3
           application/xml:
@@ -3423,7 +3423,7 @@ paths:
                 isPaid:
                   type: boolean
                   example: 1
-                status: 
+                status:
                   type: number
                   example: 0 | 1 | 2 | 3
           application/x-www-form-urlencoded:
@@ -3436,30 +3436,30 @@ paths:
                 isPaid:
                   type: boolean
                   example: 1
-                status: 
+                status:
                   type: number
                   example: 0 | 1 | 2 | 3
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3476,35 +3476,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Order"
+              $ref: '#/components/schemas/Order'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Order"
+              $ref: '#/components/schemas/Order'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Order"
+              $ref: '#/components/schemas/Order'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3539,71 +3539,71 @@ paths:
           in: query
           description: sort of list orders
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: userId
           in: query
           description: filter of list order by user id (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
         - name: status
           in: query
           description: filter of list orders by status of user (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
         - name: productId
           in: query
           description: filter of list orders by productId of user (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
         - name: cityId
           in: query
           description: filter of list orders by cityId of user (if many add |)
           required: false
-          example: "1|2"
+          example: '1|2'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "201":
+                  $ref: '#/components/schemas/Order'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3646,34 +3646,34 @@ paths:
           in: query
           description: sort of list orders  of system
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
-  
+
   /api/orders/me/{orderId}:
     get:
       tags:
@@ -3690,26 +3690,26 @@ paths:
             type: string
 
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3730,26 +3730,26 @@ paths:
             type: string
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3770,26 +3770,26 @@ paths:
             type: string
 
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3809,26 +3809,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3847,26 +3847,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3888,49 +3888,49 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Order"
+              $ref: '#/components/schemas/Order'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Order"
+              $ref: '#/components/schemas/Order'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Order"
+              $ref: '#/components/schemas/Order'
         required: true
 
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "201":
+                  $ref: '#/components/schemas/Order'
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
+                  $ref: '#/components/schemas/Order'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Order"
-        "401":
+                  $ref: '#/components/schemas/Order'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -3947,35 +3947,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4010,7 +4010,7 @@ paths:
           in: query
           description: sort of list reviews
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: minStar
@@ -4038,26 +4038,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4077,26 +4077,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4114,26 +4114,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4155,35 +4155,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4207,35 +4207,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Review"
+              $ref: '#/components/schemas/Review'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4254,26 +4254,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4298,32 +4298,32 @@ paths:
                   items:
                     type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
 
   /api/comments/public:
-   get:
+    get:
       tags:
         - comments
       summary: get list public comment
@@ -4354,7 +4354,7 @@ paths:
           in: query
           description: sort of list comments
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: productId
@@ -4370,26 +4370,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4406,35 +4406,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4469,7 +4469,7 @@ paths:
           in: query
           description: sort of list comments
           required: false
-          example: "created asc"
+          example: 'created asc'
           schema:
             type: string
         - name: productId
@@ -4485,30 +4485,30 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
-  
+
   /api/comments/reply:
     post:
       tags:
@@ -4521,35 +4521,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4569,26 +4569,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4606,26 +4606,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4647,35 +4647,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4699,35 +4699,35 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/xml:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Comment"
+              $ref: '#/components/schemas/Comment'
         required: true
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4746,26 +4746,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4790,26 +4790,26 @@ paths:
                   items:
                     type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
+                  $ref: '#/components/schemas/Comment'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Comment"
-        "401":
+                  $ref: '#/components/schemas/Comment'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4822,30 +4822,30 @@ paths:
       description: get all total count products
       operationId: getCountProductType
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
-  
+
   /api/report/user-type/count:
     get:
       tags:
@@ -4854,26 +4854,26 @@ paths:
       description: get all total count users
       operationId: getCountUserType
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4886,26 +4886,26 @@ paths:
       description: get all revenue order
       operationId: getRevenueOrder
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4918,26 +4918,26 @@ paths:
       description: get all total count product by status
       operationId: getCountProduct
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4950,26 +4950,26 @@ paths:
       description: get all total count order by status
       operationId: getCountOrder
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
+                  $ref: '#/components/schemas/User'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-        "401":
+                  $ref: '#/components/schemas/User'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -4982,26 +4982,26 @@ paths:
       description: get all total count products,users,reviews,orders
       operationId: getCountAllRecord
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -5011,7 +5011,7 @@ paths:
       tags:
         - notifications
       summary: Get all notification for every user login
-      description:  Get all notification for every user login
+      description: Get all notification for every user login
       operationId: getAllNotification
       parameters:
         - name: limit
@@ -5042,30 +5042,30 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Notification"
+                  $ref: '#/components/schemas/Notification'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Notification"
-        "401":
+                  $ref: '#/components/schemas/Notification'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
-  
+
   /api/notifications/{notificationId}:
     delete:
       tags:
@@ -5081,26 +5081,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Notification"
+                  $ref: '#/components/schemas/Notification'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Notification"
-        "401":
+                  $ref: '#/components/schemas/Notification'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -5120,26 +5120,26 @@ paths:
           schema:
             type: string
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Notification"
+                  $ref: '#/components/schemas/Notification'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Notification"
-        "401":
+                  $ref: '#/components/schemas/Notification'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -5152,26 +5152,26 @@ paths:
       description: marker read all notification by id
       operationId: markedReadAllNotification
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Notification"
+                  $ref: '#/components/schemas/Notification'
             application/xml:
               schema:
                 type: object
                 items:
-                  $ref: "#/components/schemas/Notification"
-        "401":
+                  $ref: '#/components/schemas/Notification'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
@@ -5199,7 +5199,7 @@ paths:
                 orderId:
                   type: string
                   format: uuid
-                  example: ""
+                  example: ''
               required:
                 - totalPrice
                 - language
@@ -5235,30 +5235,30 @@ paths:
                 - language
                 - orderId
       responses:
-        "201":
+        '201':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
+                  $ref: '#/components/schemas/Review'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Review"
-        "401":
+                  $ref: '#/components/schemas/Review'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
-  
+
   /api/payment/vnpay/vnpay_ipn:
     get:
       tags:
@@ -5266,7 +5266,7 @@ paths:
       summary: Get status payment vn pay
       description: get status payment vn pay
       operationId: getStatusVNPay
-    
+
       parameters:
         - name: vnp_TxnRef
           in: path
@@ -5293,26 +5293,26 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
+                  $ref: '#/components/schemas/Product'
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Product"
-        "401":
+                  $ref: '#/components/schemas/Product'
+        '401':
           description: UNAUTHORIZED
-        "500":
+        '500':
           description: INTERNAL_SERVER_ERROR
-        "409":
+        '409':
           description: ALREADY_EXIST
-        "400":
+        '400':
           description: INVALID
       security:
         - bearerAuth: []
